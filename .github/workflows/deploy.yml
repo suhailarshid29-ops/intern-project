@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4316703 (chnges: ymll)
 name: CI/CD Pipeline
 
 on:
