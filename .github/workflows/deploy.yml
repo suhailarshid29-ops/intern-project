@@ -38,8 +38,4 @@ jobs:
           cd ~/intern-project
           docker-compose pull
           docker-compose down
-<<<<<<< HEAD
           docker-compose up -d
-=======
-          docker-compose up -d
->>>>>>> 6b82abc (added yaml file)
