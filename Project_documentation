@@ -1,0 +1,79 @@
+MEAN Stack CI/CD Deployment Project – Documentation
+Project Summary 
+
+In this project, I took a full-stack web application (MEAN stack — MongoDB, Express, Angular, Node.js), containerized it using Docker, deployed it on a cloud virtual machine, and automated the deployment using a CI/CD pipeline. This means whenever code is updated, the application rebuilds and redeploys automatically.
+
+What I Did Step-by-Step
+1. Repository Setup
+
+Created a GitHub repository.
+
+Uploaded frontend and backend code.
+
+Organized project structure for deployment.
+
+2. Docker Containerization
+
+Created separate Dockerfiles for:
+
+Frontend (Angular app)
+
+Backend (Node.js + Express API)
+
+Built Docker images for both services.
+
+Pushed images to Docker Hub so they can be pulled from anywhere.
+
+3. Cloud Deployment
+
+Launched an Ubuntu virtual machine on cloud.
+
+Installed Docker and Docker Compose.
+
+Used a docker-compose.yml file to run:
+
+Frontend container
+
+Backend container
+
+MongoDB database container
+
+This allowed all services to run together as a complete application stack.
+
+4. Database Setup
+
+Used MongoDB as a container service.
+
+Configured environment variables so backend connects to database automatically.
+
+5. CI/CD Pipeline Automation
+
+I set up a pipeline using GitHub Actions that:
+
+When code is pushed to GitHub:
+
+Builds Docker images
+
+Pushes them to Docker Hub
+
+Connects to VM using SSH
+
+Pulls latest images
+
+Restarts containers automatically
+
+👉 So deployment is fully automated now.
+
+6. Nginx Reverse Proxy
+
+Installed Nginx on server
+
+Configured it as reverse proxy
+
+Routed all traffic through port 80
+
+User accesses app with server IP only — no port needed
+
+I have completed the assigned project involving Dockerizing and setting up a CI/CD pipeline using GitHub Actions for an Angular application and deploying it on AWS EC2.
+
+-----> The application builds and runs successfully both locally and in the container. The CI/CD workflow is fully configured. However, during deployment testing on the AWS Free Tier instance, the Angular framework was too heavy to run within the limited CPU and memory of the free-tier instance, which caused the deployment stage to fail.
